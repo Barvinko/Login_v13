@@ -1,0 +1,26 @@
+#register{
+    border-radius: 50px;
+    margin-right: auto;
+    display: block
+}
+
+body{
+    min-width: 880px;
+}
+
+#users > div{
+    height: 50px;
+    border: 1px solid black;
+    margin: 3px 2px;
+    text-align: start;
+    padding: 5px;
+}
+
+#users > div > div >*{
+    display: flex;
+    align-items: center;
+}
+
+#users > div > div > button{
+    margin-left: auto;
+}
