@@ -9,11 +9,12 @@ body{
 }
 
 #users > div{
-    height: 50px;
+    height: 55px;
     border: 1px solid black;
     margin: 3px 2px;
     text-align: start;
     padding: 5px;
+    border-radius: 5px;
 }
 
 #users > div > div >*{
@@ -23,4 +24,9 @@ body{
 
 #users > div > div > button{
     margin-left: auto;
+    border-radius: 50px;
+}
+
+#todownload{
+    border-radius: 50px;
 }

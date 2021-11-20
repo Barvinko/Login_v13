@@ -2,6 +2,7 @@ let box = document.querySelector('#equation');
 let x = (Math.random() * 25 + 1).toFixed(0);
 box.innerHTML = `lg(4*${x})`;
 console.log((Math.log10(4*x)).toFixed(2));
+console.log(localStorage.getItem("Level"));
 
 async function login() {
     let users;
@@ -15,11 +16,16 @@ async function login() {
     console.log(username,password,resultUser);
 
     let result = (Math.log10(4*x)).toFixed(2);
-    console.log(result);
+    console.log(result,users[`${username}`].accLevel);
 
     if (users.hasOwnProperty(`${username}`) && users[`${username}`].password == password && resultUser == result) {
+        sessionStorage.setItem("Level",users[`${username}`].accLevel);
         console.log("us");
-        window.location.replace("main.html");
+        if (users[`${username}`].accLevel.includes('A')) {
+            window.location.replace("register.html");
+        }else{
+            window.location.replace("main.html");
+        }
     }else{
         console.log("no us");
     }

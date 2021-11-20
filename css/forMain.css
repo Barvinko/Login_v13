@@ -1,8 +1,72 @@
 input{
     width: 50vw;
-    height: 30vw;
+    height: 30vh;
 }
 
 textarea{
     border-radius: 10px;
+    border: blue;
+}
+#downloadCripherText{
+    height: 47.97px;
+    margin-right: auto;
+    /*width: 164px;*/
+}
+
+#upload{
+    display: block;
+}
+
+main > div{
+    max-width: 75%;
+    min-width: 90%;
+}
+
+.container{
+    background-color: white;
+    padding: 0;
+    min-width: 370px;
+    border-radius: 20px 20px 10px 10px;
+    overflow: hidden;
+    margin-top: 10vh;
+    background: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body{
+    background-image:url("../images/bg-01.jpg") ;
+}
+
+header{
+    height: 50px;
+    background: rgb(55, 41, 118);
+}
+
+main{
+    background: rgb(35, 22, 60);
+    height: 100%;
+}
+
+main div{
+    margin-top: 10px;
+}
+
+main a{
+    margin-top: 10px;
+}
+
+#feedback{
+    width: 70%;
+    height: 10vh;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    color: rgba(0, 0, 255, 0.707);
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: blueviolet 3px;
 }

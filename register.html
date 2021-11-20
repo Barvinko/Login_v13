@@ -36,10 +36,10 @@
 	
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="login100-more pr-2" style="background-image: url('images/bg-01.jpg');">
-				<div class="h-100 w-100 bg-light" id="magazine">
-					<div>
-						<button onclick="cout()" class="btn btn-primary">obnov</button>
+			<div class="login100-more pr-2 bg-primary">
+				<div class="h-100 w-100 bg-light border-right" id="magazine">
+					<div class="bg-primary p-2">
+						<button onclick="logout()" class="btn btn-primary">EXIT</button>
 					</div>
 					<div id="users">
 
@@ -83,6 +83,13 @@
 						<span class="focus-input100"></span>
 					</div>
 
+					<div class="wrap-input100 validate-input" data-validate = "Access level is required">
+						<span class="label-input100">Access level</span>
+						<input class="input100" id="accessLevel" type="text" name="repeat-pass" placeholder="*************">
+						<span class="focus-input100"></span>
+					</div>
+
+
 					<!-- <div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
@@ -100,9 +107,9 @@
 					</div> -->
 
 				<div class="w-100 d-flex">
-					<button type="button" id="register" class="btn btn-primary btn-lg" onclick="registration()">Large button</button>
+					<button type="button" id="register" class="btn btn-primary btn-lg" onclick="registration()">Sign up</button>
 
-					<a id="todownload" class="btn btn-primary btn-lg ml-auto">Сохранить в файл</a>
+					<a id="todownload" class="btn btn-primary btn-lg ml-auto text-white">Download</a>
 				</div>
 					<!-- <button type="button" id="todownload" class="btn m-auto btn-primary btn-lg">Large button</button> -->
 

@@ -11,15 +11,23 @@
     <link rel="stylesheet" href="./css/forMain.css">
 </head>
 <body>
-    <div class="container mt-3">
+    <div class="container w-75">
         <header class="border-bootem">
-
+            <button onclick="logout()" class="btn btn-primary btn-lg h-100">EXIT</button>
         </header>
-        <main>
+        <main class="p-3">
             <textarea class="w-100" name="" id="text" cols="30" rows="10" placeholder="Your text..."></textarea>
-            <button onclick="encryption()">Crypt</button>
-            <a id="downloadCripherText" class="btn btn-primary btn-lg ml-auto">Сохранить в файл зашыфрованый текст</a>
-            <button onclick="decryption()">deCrypt</button>
+            <!-- <button onclick="encryption()">Crypt</button> -->
+            <div class="d-flex m-auto">
+                <a id="downloadCripherText" role="button" class="btn btn-primary btn-lg mr-auto">Encryption</a>
+                <div class="d-flex flex-column justify-content-center">
+                    <button onclick="decryption()" class="btn btn-primary btn-lg m-auto">Decryption</button>
+                    <a id="upload" role="button" class="btn btn-primary btn-lg mt-2">Download text</a>
+                </div>
+            </div>
+            <div id="feedback" class="text-center">
+
+            </div>
         </main>
     </div>
 </body>

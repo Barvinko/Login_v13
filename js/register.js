@@ -1,4 +1,11 @@
 let users;
+setTimeout(logout,10000);
+
+function logout() {
+    sessionStorage.setItem("Level","");
+    window.location.replace("index.html");
+    //console.log("tamer off");
+}
 
 async function cout() {
     let UsersKey = Object.keys(users); //create array with key for use cycle
@@ -14,7 +21,8 @@ async function cout() {
                         <div class="d-flex">
                             <h6 class='my-1'>
                                 Username: ${users[UsersKey[i]].username}  
-                                Password :${users[UsersKey[i]].password}
+                                Password: ${users[UsersKey[i]].password}
+                                Level: ${users[UsersKey[i]].accLevel}
                             </h6>
                             <button onclick="deleteUser(this)" id="button${i}" class="btn btn-primary delete">Delete</button>
                             
@@ -44,15 +52,17 @@ async function deleteUser(obj) {
 }
 
 async function registration() {
-    let username, password, rePassword;
+    let username, password, rePassword, accLevel;
     username = document.getElementById("username").value;
     password = document.getElementById("password").value;
     rePassword = document.getElementById("rePassword").value;
-    console.log(username,password,rePassword);
+    accLevel = document.getElementById("accessLevel").value;
+
+    console.log(username,password,rePassword,accLevel);
     //let bvn = 2233;
     //txtUsers = JSON.stringify({ x: 5, y: 6 });
     if (password == rePassword) {
-        users[`${username}`] = {"username": username, "password": password};
+        users[`${username}`] = {"username": username, "password": password, "accLevel": accLevel};
     }
     //console.log(txtUsers);
     console.log(users);
