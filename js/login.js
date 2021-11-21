@@ -3,7 +3,6 @@ let x = (Math.random() * 25 + 1).toFixed(0);
 box.innerHTML = `lg(4*${x})`;
 console.log((Math.log10(4*x)).toFixed(2));
 console.log(localStorage.getItem("Level"));
-sessionStorage.setItem("Time", 0);
 
 async function login() {
     let users;

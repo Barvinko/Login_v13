@@ -1,6 +1,9 @@
 console.log("shshshshsh");
 let n, p, q, e, d, fE, text, data, hash, hash2, s, sign, splitData, cryData;
 let level = sessionStorage.getItem("Level");
+if (level.includes('A') == false || level.includes('E') == false || level.includes('R') == false || level.includes('W') == false) {
+    sessionStorage.setItem("Time", 0);
+}
 //console.log(level.includes('E'));
 //console.log(level.includes('R'));
 let time = sessionStorage.getItem("Time");
