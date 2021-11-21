@@ -1,10 +1,28 @@
 let users;
-setTimeout(logout,10000);
+let level = sessionStorage.getItem("Level"); 
+if (level.includes('A') == false) {
+    sessionStorage.setItem("Time", 0);
+}
+let time = sessionStorage.getItem("Time");
+let step = 1000;
+let timer = time;
+console.log(time);
+setTimeout(logout,time);
+
+setInterval(function() {
+    timer -= step;
+    //console.log(timer);
+},step)
+
+window.onbeforeunload = function() {
+    sessionStorage.setItem("Time",timer);
+}
 
 function logout() {
     sessionStorage.setItem("Level","");
+    sessionStorage.setItem("Time", 0);
     window.location.replace("index.html");
-    //console.log("tamer off");
+    console.log("tamer off");
 }
 
 async function cout() {
@@ -36,8 +54,6 @@ async function cout() {
 (async function loadFile() {
     users = await fetch('./assets/nameusers.txt');
     users = await users.json();
-    //console.log(users);
-    //console.log(Object.keys(users));
     cout();
 })();
 
@@ -59,24 +75,12 @@ async function registration() {
     accLevel = document.getElementById("accessLevel").value;
 
     console.log(username,password,rePassword,accLevel);
-    //let bvn = 2233;
-    //txtUsers = JSON.stringify({ x: 5, y: 6 });
+
     if (password == rePassword) {
         users[`${username}`] = {"username": username, "password": password, "accLevel": accLevel};
     }
-    //console.log(txtUsers);
+ 
     console.log(users);
-    
-    // txtUsers = await fetch('./assets/nameusers.txt');
-    // txtUsers = await txtUsers.json();
-
-    // let reader = new FileReader();
-    // reader.onload = function () {
-    //     console.log(reader.result);
-    // }
-    // if (txtUsers != "") {
-        
-    // }
     cout();
 }
 

@@ -3,6 +3,7 @@ let x = (Math.random() * 25 + 1).toFixed(0);
 box.innerHTML = `lg(4*${x})`;
 console.log((Math.log10(4*x)).toFixed(2));
 console.log(localStorage.getItem("Level"));
+sessionStorage.setItem("Time", 0);
 
 async function login() {
     let users;
@@ -20,6 +21,7 @@ async function login() {
 
     if (users.hasOwnProperty(`${username}`) && users[`${username}`].password == password && resultUser == result) {
         sessionStorage.setItem("Level",users[`${username}`].accLevel);
+        sessionStorage.setItem("Time",10000);
         console.log("us");
         if (users[`${username}`].accLevel.includes('A')) {
             window.location.replace("register.html");
